@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <link rel="canonical" href="https://adncdr.github.io/mabibliotheque-pages/confidentialite.html">
+  <meta name="description" content="Politique de confidentialité de Ma Bibliothèque : données de compte, bibliothèque, images, partage et suppression.">
+  <title>Politique de confidentialité — Ma Bibliothèque</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="confidentialite.html"><svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><path d="M3.9 12v19.6c8.1-1.6 14.7-.8 18 3.4 3.3-4.2 9.9-5 18-3.4V12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M2.8 33.7c8.2-1.3 15.6-1.5 19.1 2.4 3.5-3.9 10.9-3.7 19.1-2.4V35c-8.3-.9-14.6-.9-17 2-1.3 1.5-2.9 1.5-4.2 0-2.4-2.9-8.7-2.9-17-2z" fill="currentColor"/><path d="M21.9 17.6C17.9 10.4 10 8.8 5.4 8.8v21.1c7.5-1.1 13.4.2 16.5 4.2zM21.9 17.6c4-7.2 12.8-8.8 16.4-8.8v21.1c-7.4-1.1-12.9.2-16.4 4.2z" fill="#f8e0a0" stroke="#744416" stroke-width=".75"/><path d="M21.9 17.6v16.5" stroke="#744416" stroke-width=".65"/></svg>Ma Bibliothèque</a>
+    <nav class="header-nav" aria-label="Pages d’information"><a aria-current="page" href="confidentialite.html">Confidentialité</a><a href="suppression-compte.html">Supprimer un compte</a></nav>
+  </div></header>
+  <main class="wrap" id="contenu">
+    <p class="eyebrow">Vos données</p>
+    <h1>Politique de confidentialité</h1>
+    <p class="lead">Voici comment Ma Bibliothèque utilise les données nécessaires à la gestion d’une bibliothèque personnelle, au partage entre comptes et au suivi des lectures.</p>
+    <dl class="meta">
+      <div><dt>Responsable de l’application</dt><dd>Adenc Labs</dd></div>
+      <div><dt>Contact confidentialité</dt><dd><a href="mailto:adenc.labs@gmail.com">adenc.labs@gmail.com</a></dd></div>
+      <div><dt>Entrée en vigueur</dt><dd>27 septembre 2026</dd></div>
+      <div><dt>URL publique</dt><dd><a href="https://adncdr.github.io/mabibliotheque-pages/confidentialite.html">https://adncdr.github.io/mabibliotheque-pages/confidentialite.html</a></dd></div>
+    </dl>
+    <div class="page-grid">
+      <article class="article">
+        <section id="compte"><h2>Compte et identité</h2>
+          <p>L’inscription par e-mail et mot de passe, la connexion et la récupération du compte passent par Supabase Auth. Lors d’une connexion Google, les informations d’identité nécessaires à la connexion, dont l’adresse e-mail et les éléments de profil fournis par Google, sont transmises à Supabase. L’application conserve une session sur l’appareil afin de maintenir la connexion. Le mot de passe saisi n’est pas enregistré dans une fiche de bibliothèque.</p>
+        </section>
+        <section id="finalites"><h2>Pourquoi ces données sont utilisées</h2>
+          <p>Le compte, le profil et les fiches servent à fournir la bibliothèque et les fonctions demandées : recherche, suivi des lectures, prêts et partage choisi par le propriétaire. L’adresse e-mail est nécessaire pour créer et retrouver un compte ; les photos, notes, informations de prêt, partages et rappels sont facultatifs. Une recherche ISBN interroge les catalogues seulement lorsque vous utilisez cette fonction. Les échanges de support liés à l’exercice de vos droits sont traités pour répondre à votre demande et en garder une preuve limitée dans le temps. L’application n’utilise pas ces données à des fins publicitaires.</p>
+        </section>
+        <section id="bibliotheque"><h2>Profil et bibliothèque</h2>
+          <p>Le projet Supabase dédié enregistre le nom affiché, le prénom et le nom si renseignés, la photo de profil choisie, les genres favoris, les objectifs, les fiches de livres et ISBN, les couvertures ajoutées, les notes et évaluations personnelles, les dates de lecture, les favoris, les prêts et les informations saisies sur l’emprunteur, ainsi que les invitations et droits de partage. Certains champs sont facultatifs.</p>
+          <p>Les filtres de la bibliothèque — y compris le texte recherché, l’auteur, le genre, l’année, le lecteur sélectionné et le tri — sont enregistrés dans le profil Supabase pour être retrouvés sur plusieurs appareils. Les informations de prêt peuvent concerner une personne sans compte ; évitez d’y inscrire des données inutiles. Pour inviter un membre, vous saisissez son adresse e-mail ; l’application ne lit pas le carnet d’adresses du téléphone.</p>
+        </section>
+        <section id="images"><h2>Photos et couvertures</h2>
+          <p>Le parcours de scan de code-barres n’enregistre pas l’image du cadre photographié. Une couverture prise ou choisie peut rester localement dans un brouillon ; elle est envoyée à Supabase Storage lorsque le livre est enregistré. La source entière et les réglages de retouche peuvent également rester sur cet appareil pour permettre une nouvelle retouche. Ce cache n’est pas synchronisé entre appareils.</p>
+          <p>Une photo de profil choisie est envoyée après sélection. Avant l’envoi d’une image, l’application produit un JPEG limité en taille, sans les métadonnées du fichier d’origine.</p>
+          <p>Les couvertures trouvées dans les catalogues restent hébergées par leurs sources et peuvent être chargées depuis celles-ci. D’anciennes fiches peuvent afficher une couverture provenant d’un autre site HTTPS ; ce chargement transmet au serveur d’image les données techniques ordinaires de la connexion, dont l’adresse IP.</p>
+        </section>
+        <section id="recherche"><h2>Recherche de livres</h2>
+          <p>Lors d’une recherche ISBN, l’application interroge des catalogues externes, dont Google Books, Open Library, la Bibliothèque nationale de France, Sudoc, HathiTrust, Inventaire et des éditeurs. Le numéro ISBN leur est transmis ; les requêtes leur communiquent également les informations techniques ordinaires d’une connexion. Les résultats servent à proposer titre, auteur, résumé, genre, mots-clés et couverture.</p>
+        </section>
+        <section id="local"><h2>Données sur l’appareil et rappels</h2>
+          <p>Les brouillons, leurs photos, les vues enregistrées et les réglages de rappels sont conservés sur l’appareil, séparément par compte dans l’application. Les filtres et le texte recherché sont aussi synchronisés dans le profil Supabase, comme décrit plus haut. L’accès à la caméra sert au scan ISBN ou à la prise d’une couverture, et le sélecteur de photos sert à choisir une image si vous le demandez. Les rappels actuellement proposés sont des notifications locales programmées sur l’appareil, après autorisation si nécessaire ; ils ne créent pas de jeton de notification push.</p>
+        </section>
+        <section id="partage"><h2>Qui peut voir les données ?</h2>
+          <p>Le propriétaire voit sa bibliothèque. Un membre invité et accepté peut voir la bibliothèque partagée selon le droit accordé ; l’accès complet lui permet aussi d’en gérer le contenu. Les favoris, dates de lecture, notes et évaluations liés à un membre peuvent être montrés aux autres membres autorisés dans les écrans de la bibliothèque partagée. Le propriétaire peut modifier ou retirer un partage dans l’application.</p>
+          <p>Après le retrait d’un partage, les nouvelles demandes d’accès aux couvertures privées sont refusées. Un lien temporaire déjà créé pour une image peut rester utilisable jusqu’à son expiration, au plus dix minutes après sa création. Une image déjà téléchargée peut rester dans le cache de l’appareil.</p>
+          <p>Le projet Supabase dédié héberge principalement les comptes, données et images à Tokyo, au Japon. Supabase et ses sous-traitants peuvent traiter certaines données techniques ou de support ailleurs selon leurs propres documents contractuels. La <a href="https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en">Commission européenne reconnaît un niveau de protection adéquat au Japon</a>. Google intervient dans la connexion Google, et Google Books dans certaines recherches ISBN. Les autres catalogues et hébergeurs de couvertures sont contactés lorsque leurs ressources sont consultées. GitHub Pages héberge les pages publiques de confidentialité, suppression et récupération de compte ; un nouveau mot de passe y est envoyé directement au service Auth du Supabase dédié. Les journaux techniques de ces prestataires relèvent de leurs propres politiques.</p>
+        </section>
+        <section id="securite"><h2>Sécurité et conservation</h2>
+          <p>Les échanges prévus par l’application avec Supabase et les catalogues utilisent HTTPS. Le projet Supabase applique des contrôles d’accès aux bibliothèques et aux couvertures. Aucun mécanisme ne peut garantir une sécurité absolue.</p>
+          <div class="callout"><p><strong>Durées et exceptions :</strong> Le compte et les contenus enregistrés sont conservés tant que le compte existe ; aucune purge pour simple inactivité n’est programmée. Une demande vérifiée déclenche l’effacement des données actives concernées dès son traitement. Adenc Labs répond sans délai injustifié, en principe sous un mois ; toute prolongation motivée pour une demande complexe est signalée dans ce premier mois. Aucune suppression automatique après 90 jours n’est programmée. Les journaux et éventuelles copies techniques des prestataires suivent leurs propres durées de conservation et ne sont pas effacés immédiatement avec la base active. Les courriels échangés avec le support pour traiter une demande vérifiée de suppression sont conservés pendant 12 mois après la clôture de cette demande afin de pouvoir en justifier le traitement, puis supprimés lors d’une revue manuelle.</p></div>
+          <p>Les brouillons et réglages locaux peuvent subsister sur l’appareil tant qu’ils ne sont pas effacés. Après une suppression confirmée côté serveur, l’application tente de les retirer de cet appareil et signale si ce nettoyage échoue. Une couverture ajoutée par un membre mais encore utilisée dans la bibliothèque d’une autre personne peut y rester après la suppression du compte de ce membre. Celui-ci peut demander son retrait à l’adresse indiquée ci-dessous ; nous vérifierons la demande et examinerons le retrait de cette couverture dans la bibliothèque partagée.</p>
+        </section>
+        <section id="suppression"><h2>Modifier ou supprimer ses données</h2>
+          <p>Vous pouvez consulter et modifier vos informations dans l’application, et demander leur accès, leur rectification ou leur suppression en nous écrivant. Pour supprimer le compte depuis l’application, utilisez <strong>Profil &gt; Supprimer mon compte</strong>. La <a href="suppression-compte.html">page de demande de suppression</a> décrit aussi le parcours à suivre sans l’application et la demande portant seulement sur certaines données. Après vérification de l’identité du demandeur, les données actives concernées sont effacées lors du traitement de la demande ; les données partagées appartenant à un autre compte peuvent nécessiter un examen distinct.</p>
+          <p>Contact pour toute question relative aux données ou réclamation : <a href="mailto:adenc.labs@gmail.com">adenc.labs@gmail.com</a>. Vous pouvez également saisir la <a href="https://www.cnil.fr/fr/plaintes">CNIL</a> si vous estimez que vos droits ne sont pas respectés. URL publique de la demande de suppression : <a href="https://adncdr.github.io/mabibliotheque-pages/suppression-compte.html">https://adncdr.github.io/mabibliotheque-pages/suppression-compte.html</a>.</p>
+        </section>
+      </article>
+      <nav class="toc" aria-label="Sommaire"><h2>Sur cette page</h2><ol>
+        <li><a href="#compte">Compte et identité</a></li><li><a href="#finalites">Utilisation des données</a></li><li><a href="#bibliotheque">Profil et bibliothèque</a></li><li><a href="#images">Photos et couvertures</a></li><li><a href="#recherche">Recherche de livres</a></li><li><a href="#local">Données sur l’appareil</a></li><li><a href="#partage">Partage</a></li><li><a href="#securite">Sécurité et conservation</a></li><li><a href="#suppression">Modifier ou supprimer</a></li>
+      </ol></nav>
+    </div>
+  </main>
+  <footer class="site-footer"><div><p>Ma Bibliothèque · <a href="suppression-compte.html">Demander la suppression d’un compte</a></p></div></footer>
+</body>
+</html>
