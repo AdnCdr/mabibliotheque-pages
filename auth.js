@@ -7,22 +7,47 @@
 
   const status = document.getElementById('status');
   const form = document.getElementById('password-form');
+  const recoveryForm = document.getElementById('recovery-form');
   if (error) {
-    status.textContent = 'Ce lien a expiré ou a été refusé. Demandez un nouveau lien depuis Ma Bibliothèque.';
-    return;
-  }
-  if (!accessToken) {
-    status.textContent = 'Ouvrez Ma Bibliothèque sur votre téléphone. Si vous devez définir un mot de passe, utilisez « Mot de passe oublié » dans l’application.';
-    return;
-  }
-  if (type !== 'invite' && type !== 'recovery') {
+    status.textContent = 'Ce lien a expiré ou a été refusé. Demandez un nouveau lien.';
+    recoveryForm.hidden = false;
+  } else if (!accessToken) {
+    status.textContent = 'Vous pouvez demander un lien pour définir votre mot de passe.';
+    recoveryForm.hidden = false;
+  } else if (type !== 'invite' && type !== 'recovery') {
     accessToken = null;
     status.textContent = 'Votre adresse a été confirmée. Ouvrez Ma Bibliothèque sur votre téléphone.';
-    return;
+    recoveryForm.hidden = false;
+  } else {
+    status.textContent = type === 'invite' ? 'Votre invitation est confirmée. Choisissez un mot de passe.' : 'Choisissez un nouveau mot de passe.';
+    form.hidden = false;
   }
 
-  status.textContent = type === 'invite' ? 'Votre invitation est confirmée. Choisissez un mot de passe.' : 'Choisissez un nouveau mot de passe.';
-  form.hidden = false;
+  recoveryForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const emailInput = document.getElementById('email');
+    const button = recoveryForm.querySelector('button');
+    button.disabled = true;
+    status.textContent = 'Demande en cours…';
+    try {
+      const response = await fetch('https://biqufagdklropvjkxctp.supabase.co/auth/v1/recover', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          apikey: 'sb_publishable_7QGyye8lMHF0j7Po15p5pQ_CRa2RvO1',
+        },
+        body: JSON.stringify({ email: emailInput.value.trim().toLowerCase() }),
+      });
+      if (response.status === 429) throw new Error('Trop de courriels ont été demandés. Réessayez plus tard.');
+      if (!response.ok) throw new Error('Envoi impossible pour le moment. Réessayez plus tard.');
+      emailInput.value = '';
+      recoveryForm.hidden = true;
+      status.textContent = 'Si ce compte existe, un nouveau lien a été envoyé. Ouvrez-le dans ce navigateur.';
+    } catch (reason) {
+      status.textContent = reason instanceof Error ? reason.message : 'Envoi impossible pour le moment.';
+      button.disabled = false;
+    }
+  });
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const passwordInput = document.getElementById('password');
