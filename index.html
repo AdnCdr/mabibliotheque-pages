@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src https://biqufagdklropvjkxctp.supabase.co; base-uri 'none'; form-action 'none'">
+  <title>Connexion — Ma Bibliothèque</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="auth.js"></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="site-header"><div class="header-inner"><span class="brand">Ma Bibliothèque</span><nav class="header-nav" aria-label="Informations"><a href="suppression-compte.html">Supprimer un compte</a></nav></div></header>
+  <main class="wrap auth-wrap" id="contenu">
+    <p class="eyebrow">Compte Ma Bibliothèque</p>
+    <h1>Continuer la connexion</h1>
+    <p id="status" class="lead" role="status">Vérification du lien…</p>
+    <form id="password-form" class="auth-card" hidden>
+      <h2>Choisir un mot de passe</h2>
+      <label for="password">Nouveau mot de passe</label>
+      <input id="password" type="password" minlength="8" autocomplete="new-password" required>
+      <label for="confirmation">Confirmer le mot de passe</label>
+      <input id="confirmation" type="password" minlength="8" autocomplete="new-password" required>
+      <button type="submit">Enregistrer</button>
+    </form>
+    <p>Après confirmation, ouvrez Ma Bibliothèque sur votre téléphone et connectez-vous avec votre adresse e-mail.</p>
+    <p>Ne partagez jamais un lien ou un code de connexion.</p>
+  </main>
+  <footer class="site-footer"><div><p>Adenc Labs · <a href="suppression-compte.html">Demander la suppression d’un compte</a></p></div></footer>
+</body>
+</html>
